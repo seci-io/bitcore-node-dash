@@ -2,12 +2,12 @@
   "name": "bitcore-node-seci",
   "description": "Full node with extended capabilities using Bitcore and Seci Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.0.4",
+  "version": "3.0.6",
   "main": "./index.js",
-  "repository": "git://github.com/secipay/bitcore-node-seci.git",
-  "homepage": "https://github.com/secipay/bitcore-node-seci",
+  "repository": "git://github.com/secievo/bitcore-node-seci.git",
+  "homepage": "https://github.com/secievo/bitcore-node-seci",
   "bugs": {
-    "url": "https://github.com/secipay/bitcore-node-seci/issues"
+    "url": "https://github.com/secievo/bitcore-node-seci/issues"
   },
   "contributors": [
     {
@@ -36,7 +36,9 @@
     "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
     "coverage": "istanbul cover _mocha -- --recursive",
-    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "mocha": "./node_modules/.bin/mocha",
+    "bitcoind_test": "./node_modules/.bin/mocha test/services/bitcoind.unit.js"
   },
   "tags": [
     "seci",
@@ -44,8 +46,8 @@
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-seci": "^0.7.1",
-    "bitcore-lib-seci": "^0.13.20",
+    "bitcoind-rpc-seci": "^1.0.1",
+    "bitcore-lib-seci": "^0.15.2",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -67,7 +69,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-seci": "^1.1.2",
+    "bitcore-p2p-seci": "^1.1.6",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
